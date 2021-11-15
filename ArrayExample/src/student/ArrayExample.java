@@ -9,16 +9,16 @@ public class ArrayExample {
         Student[] students = new Student[10];
 
         // Initialize Array with students
-        students[0] = new Student(1, Studiengang.INFORMATIK);
-        students[1] = new Student(2, Studiengang.BWL);
-        students[2] = new Student(2, Studiengang.WINF);
-        students[3] = new Student(2, Studiengang.INFORMATIK);
-        students[4] = new Student(2, Studiengang.WINF);
-        students[5] = new Student(2, Studiengang.WINF);
-        students[6] = new Student(2, Studiengang.BWL);
-        students[7] = new Student(2, Studiengang.INFORMATIK);
-        students[8] = new Student(2, Studiengang.WINF);
-        students[9] = new Student(2, Studiengang.WINF);
+        students[0] = new Student(1, "INFORMATIK");
+        students[1] = new Student(2, "BWL");
+        students[2] = new Student(2, "WINF");
+        students[3] = new Student(2, "INFORMATIK");
+        students[4] = new Student(2, "WINF");
+        students[5] = new Student(2, "WINF");
+        students[6] = new Student(2, "BWL");
+        students[7] = new Student(2, "INFORMATIK");
+        students[8] = new Student(2, "WINF");
+        students[9] = new Student(2, "WINF");
 
     }
 }
