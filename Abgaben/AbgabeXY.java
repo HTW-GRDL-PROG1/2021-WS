@@ -1,8 +1,8 @@
-package abgabe3;
+package abgabeXY;
 
 import java.util.*;
 
-public class Abgabe03 {
+public class AbgabeXY {
 
     public static void main(String[] args) {
 
