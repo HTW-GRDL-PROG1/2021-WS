@@ -1,5 +1,3 @@
-package abgabe3;
-
 import java.util.*;
 
 /**
@@ -23,10 +21,10 @@ public class Abgabe31 {
         int eingabe2 = scanner.nextInt();
 
         // Aufruf zur Berechnung
-        int ergebnis = methode1(eingabe1, eingabe2);
+        // int ergebnis = methode1(eingabe1, eingabe2);
 
         // Ausgabe des Ergebnis
-        System.out.println(ergebnis);
+        // System.out.println(ergebnis);
 
     }
 

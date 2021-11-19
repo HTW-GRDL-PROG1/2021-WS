@@ -1,4 +1,3 @@
-package abgabe3;
 
 /**
  * Primzahlen

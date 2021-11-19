@@ -1,5 +1,3 @@
-package abgabe3;
-
 /**
  * Boolesche Ausdrücke
  */
@@ -23,4 +21,34 @@ public class Abgabe34 {
      * @param x3 Boolescher Wert
      * @return Das Ergebnis gemäß Wahrheitstabelle
      */
+    public static boolean boolCheck(boolean x1, boolean x2, boolean x3) {
+        // false false false -> false
+        if (x1 == false & x2 == false & x3 == false) {
+            return false;
+        }
+        // false false true -> true
+        else if (x1 == false & x2 == false & x3 == true) {
+            return true;
+        }
+        // false true false -> false
+        else if (x1 == false & x2 == true & x3 == false) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // Vergleiche zwei floats
+    // Wenn a < b gib true zurück, sonst gibt false zurück
+    public static boolean floatCompare1(float a, float b) {
+        return (a < b);
+    }
+
+    public static boolean floatCompare2(float a, float b) {
+        if (a < b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

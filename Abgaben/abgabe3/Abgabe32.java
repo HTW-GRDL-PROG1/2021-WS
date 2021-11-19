@@ -1,5 +1,3 @@
-package abgabe3;
-
 /**
  * What's the answer
  */
