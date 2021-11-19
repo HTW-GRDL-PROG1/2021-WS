@@ -1,8 +1,8 @@
 package examples;
 
 /**
- * Erstelle eine Methode arrayCopy, die ein Array entgegennimmt und eine Kopie
- * des Arrays zurückgibt.
+ * Erstelle eine Methode arrayCopy, die ein integer Array entgegennimmt und eine
+ * Kopie des Arrays zurückgibt.
  * 
  * @author Jan Niklas Engel (engelj@htw-berlin.de)
  */
@@ -29,17 +29,22 @@ public class ArrayCopy {
     /**
      * Kopiert ein Array und gibt eine Kopie davon zurück
      * 
-     * @param zahlen integer Array beliebiger Länge
-     * @return eine Kopie von zahlen
+     * @param input integer Array beliebiger Länge
+     * @return Kopie des input Arrays
      */
-    public static int[] arrayCopy(int[] zahlen) {
+    public static int[] arrayCopy(int[] input) {
 
-        int[] zahlenKopie = new int[zahlen.length];
+        // Länge des Arrays 'input'
+        int laenge = input.length;
 
-        for (int i = 0; i < zahlen.length; i++) {
-            zahlenKopie[i] = zahlen[i];
+        // Array erzeugen/erstellen
+        int[] kopie = new int[laenge];
+
+        // Initialisieren/Befüllen mit Werten
+        for (int index = 0; index < laenge; index++) {
+            kopie[index] = input[index];
         }
+        return kopie;
 
-        return zahlenKopie;
     }
 }

@@ -16,6 +16,7 @@ public class ArrayReverse {
         for (int zahl : zahlen) {
             System.out.print(zahl + " ");
         }
+        System.out.println();
 
         arrayReverse(zahlen);
 
@@ -31,7 +32,6 @@ public class ArrayReverse {
      * @param zahlen integer Array beliebiger Länge
      */
     public static void arrayReverse(int[] zahlen) {
-
         int laenge = zahlen.length;
 
         for (int i = 0; i < laenge / 2; i++) {

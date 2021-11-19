@@ -33,14 +33,15 @@ public class StudentExample {
     /**
      * Gibt die Matrikelnummern aller Winf Studenten aus.
      * 
-     * @param students
+     * @param students Array mit Studierenden
      */
     public static void printWinf(Student[] students) {
-        for (Student student : students) {
 
+        for (Student student : students) {
             if (student.studiengang == "WINF") {
                 System.out.println("Matrikelnummer: " + student.matrikelnummer);
             }
         }
+
     }
 }
