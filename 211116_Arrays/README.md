@@ -1,8 +1,13 @@
 ## Praktische Vorlesung vom 16.11.21 über Arrays
 
-## Folder Structure
+## Inhalt
 
-The workspace contains two folders by default, where:
+`examples`:
+- `ArrayCopy.java`: Array Kopieren
+- `ArrayCreation.java`: Array Erstellen
+- `ArrayReverse.java`: Array Umdrehen
+- `ArrayZero.java`: 1D und 2D Array programmatisch mit Nullen erstellen und initialisieren
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+`student`:
+- `Student.java`: Beschreibung eines Studenten
+- `StudentExample.java`: Filtere ein Array von Studenten nach dem Studiengang
