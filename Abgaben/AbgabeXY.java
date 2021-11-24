@@ -1,5 +1,3 @@
-package abgabeXY;
-
 import java.util.*;
 
 public class AbgabeXY {

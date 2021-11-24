@@ -1,3 +1,5 @@
+package abgabe3;
+
 /**
  * 2er Potenzen
  */
