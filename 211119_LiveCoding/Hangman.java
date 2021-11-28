@@ -1,4 +1,4 @@
-import java.util.Scanner;  // Import the Scanner class
+import java.util.Scanner; // Import the Scanner class
 
 /**
  * Implementiert Hangman-Spiel
@@ -11,15 +11,17 @@ public class Hangman {
     // Anzahl Leben festlegen + Rückmeldung für den User - done
 
     // Offene TODOs:
-    // "Hübschere" Ausgabe vom geratenen Wort (nicht in einander verschmelzende Unterstriche)
+    // "Hübschere" Ausgabe vom geratenen Wort (nicht in einander verschmelzende
+    // Unterstriche)
     // Gewinnen
     // Verlieren
-    // Vernünftige Fehlerbehandlung bei langen Eingaben (grad funktioniert es wenn man mehrere Zeichen eintippt und das erste davon im Wort vorkommt)
+    // Vernünftige Fehlerbehandlung bei langen Eingaben (grad funktioniert es wenn
+    // man mehrere Zeichen eintippt und das erste davon im Wort vorkommt)
     // Falsche Eingaben merken und für den User ausgeben
     // Vorzeitiges Auflösen
     // Nice-to-have: Grafische Umsetzung vom Hangman
     // Nice-to-have: Array (Liste) mit mehreren Wörtern
-    
+
     public static void main(String[] args) {
         String geheimWort = "Eichhörnchen";
         StringBuffer geratenesWort = new StringBuffer();
@@ -29,7 +31,7 @@ public class Hangman {
         }
 
         // Zum Debuggen:
-        //System.out.println("Geratenes Wort: " + geratenesWort.toString());
+        // System.out.println("Geratenes Wort: " + geratenesWort.toString());
 
         int maxAnzahlVersuche = 7;
         int verbleibendeVersuche = maxAnzahlVersuche;
@@ -40,18 +42,16 @@ public class Hangman {
             System.out.print("_ ");
         }
         System.out.print('\n');
-        
-        System.out.println("Du hast noch " + maxAnzahlVersuche + " Versuche.");
 
+        System.out.println("Du hast noch " + maxAnzahlVersuche + " Versuche.");
 
         while (verbleibendeVersuche > 0) {
 
             System.out.println("Gebe einen Buchstaben ein: ");
 
-            Scanner scanner = new Scanner(System.in);  // Create a Scanner object, reading from standard in
+            Scanner scanner = new Scanner(System.in); // Create a Scanner object, reading from standard in
 
-            String eingabe = scanner.nextLine();  // Read user input
-
+            String eingabe = scanner.nextLine(); // Read user input
 
             if (eingabe.length() > 1) {
                 System.out.println("Gib *nur* einen Buchstaben ein!");
@@ -69,7 +69,7 @@ public class Hangman {
             System.out.println(geratenesWort.toString());
 
             if (!eingabeGefunden) {
-                verbleibendeVersuche = verbleibendeVersuche - 1;            
+                verbleibendeVersuche = verbleibendeVersuche - 1;
             }
 
             System.out.print('\n');
