@@ -5,23 +5,36 @@ import java.util.Arrays;
 public class MyArray {
 
 	public static void main(String[] args) {
+
+		// Erstelle und initialisiere den Input für die addUp Methode
 		double[] inputArray1 = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 };
 		double[] inputArray2 = { 1.0, -1.0, 0.0, 0.0 };
 
-		System.out.println(addUp(inputArray1)); // 36.0
-		System.out.println(addUp(inputArray2)); // 0.0
+		// Teste die addUp Methode
+		System.out.println("Aufgabe 4.1:");
+		System.out.println("addUp(" + Arrays.toString(inputArray1) + ") = " + addUp(inputArray1));
+		System.out.println("addUp(" + Arrays.toString(inputArray2) + ") = " + addUp(inputArray2));
 
+		// Erstelle und initialisiere den Input für die countBooleans Methode
 		boolean[] bs1 = { true, false, true, false, false, false };
 		boolean[] bs2 = { false, false, false, false, false, false };
 
-		System.out.println(Arrays.toString(countBooleans(bs1))); // [2, 4]
-		System.out.println(Arrays.toString(countBooleans(bs2))); // [0, 6]
+		// Teste die countBooleans Methode
+		System.out.println("\nAufgabe 4.2:");
+		System.out.println("countBooleans(" + Arrays.toString(bs1) + ") = " + Arrays.toString(countBooleans(bs1)));
+		System.out.println("countBooleans(" + Arrays.toString(bs2) + ") = " + Arrays.toString(countBooleans(bs2)));
 
-		System.out.println(Arrays.toString(createNumbers(8))); // [1, 1, 2, 3, 5, 8, 13, 21]
+		// Teste die createNumbers Methode
+		System.out.println("\nAufgabe 4.3:");
+		System.out.println("createNumbers(8) = " + Arrays.toString(createNumbers(8)));
 
+		// Erstelle und initialisiere den Input für die findIndex Methode
 		int[][] inputArray = { { 1, 5, 6, 7 }, { 2, 3, 9 }, { 10, 11, 12 } };
-		System.out.println(findIndex(inputArray, 13)); // ""
-		System.out.println(findIndex(inputArray, 3)); // "1,1"
+
+		// Teste die findIndex Methode
+		System.out.println("\nAufgabe 4.4:");
+		System.out.println("findIndex(inputArray, 13) = " + findIndex(inputArray, 13));
+		System.out.println("findIndex(inputArray, 3) = " + findIndex(inputArray, 3));
 
 	}
 
@@ -32,7 +45,7 @@ public class MyArray {
 	 *                   sollen.
 	 * @return Die Summe (double) aller Werte des Eingabearrays
 	 */
-	private static double addUp(double[] inputArray) {
+	public static double addUp(double[] inputArray) {
 		double summe = 0;
 		for (double x : inputArray) {
 			summe += x;
@@ -44,25 +57,25 @@ public class MyArray {
 	 * countBooleans zählt die Anzahl der Vorkommen von true und false im
 	 * Eingabearray. Arrays der Größe 0 werden nicht betrachtet,
 	 * 
-	 * @param inputArray Der Eingabearray bestehend aus booleschen Werte.
+	 * @param inputArray Der Eingabearray bestehend aus booleschen Werten.
 	 * @return Der Ergebnisarray der Länge 2. An Indexstelle 0 steht die Anzahl der
 	 *         true-Vorkommen. An Indexstelle 1 steht die Anzahl der
 	 *         false-Vorkommen.
 	 */
-	private static int[] countBooleans(boolean[] inputArray) {
-		int true_count = 0;
-		int false_count = 0;
-		for (boolean bool : inputArray) {
-			if (bool) {
-				true_count++;
+	public static int[] countBooleans(boolean[] inputArray) {
+		int trueCount = 0;
+		int falseCount = 0;
+		for (boolean boolscherWert : inputArray) {
+			if (boolscherWert) { // if (boolscherWert) ist Äquivalent zu if (boolscherWert == true)
+				trueCount++;
 			} else {
-				false_count++;
+				falseCount++;
 			}
 		}
 
-		int[] Ergebnisarray = { true_count, false_count };
+		int[] ergebnisarray = { trueCount, falseCount };
 
-		return Ergebnisarray;
+		return ergebnisarray;
 	}
 
 	/**
@@ -73,17 +86,17 @@ public class MyArray {
 	 * brauchen Sie nicht zu betrachten.
 	 * 
 	 * @param inputValue Der Eingabewert, der die Größe des Arrays bestimmt.
-	 * @return Der Ergebnisarray
+	 * @return Das Ergebnisarray
 	 */
-	private static int[] createNumbers(int inputValue) {
+	public static int[] createNumbers(int inputValue) {
 
-		int[] Ergebnisarray = new int[inputValue];
-		Ergebnisarray[0] = 1;
-		Ergebnisarray[1] = 1;
+		int[] ergebnisarray = new int[inputValue];
+		ergebnisarray[0] = 1;
+		ergebnisarray[1] = 1;
 		for (int i = 2; i < inputValue; i++) {
-			Ergebnisarray[i] = Ergebnisarray[i - 1] + Ergebnisarray[i - 2];
+			ergebnisarray[i] = ergebnisarray[i - 1] + ergebnisarray[i - 2];
 		}
-		return Ergebnisarray;
+		return ergebnisarray;
 	}
 
 	/**
@@ -97,7 +110,7 @@ public class MyArray {
 	 * @return der Index an dem der gesuchte Wert steht (falls existent), ein leerer
 	 *         String andernfalls.
 	 */
-	private static String findIndex(int[][] inputArray, int inputValue) {
+	public static String findIndex(int[][] inputArray, int inputValue) {
 		for (int i = 0; i < inputArray.length; i++) {
 			int[] row = inputArray[i];
 			for (int j = 0; j < row.length; j++) {
@@ -106,6 +119,7 @@ public class MyArray {
 				}
 			}
 		}
+		System.out.println("inputValue " + inputValue + " nicht gefunden");
 		return "";
 	}
 
