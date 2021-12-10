@@ -1,0 +1,9 @@
+Main -> addiere: addiere(1,2)
+addiere -> addiere: return (1+2)
+addiere -> Console: print(10)
+Console -> methode1: param
+methode1 -> Console: 1
+Console -> addiere: 1
+addiere -> Main: ergebnis
+
+
