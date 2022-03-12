@@ -28,6 +28,8 @@ public class Abgabe31 {
         // Ausgabe des Ergebnis
         // System.out.println(ergebnis);
 
+        scanner.close();
+
     }
 
     /**

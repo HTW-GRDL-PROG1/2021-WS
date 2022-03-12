@@ -1,0 +1,164 @@
+engelj@HTW-BERLIN.de
+
+public class Hello {
+
+	public static void main(String[] args) {
+	    
+	    // Array erzeugen 1
+	    int[] arrayName = new int[4];
+	   
+	    // Array initialiseren
+	    arrayName[0] = 1;
+	    arrayName[1] = 2;
+	    arrayName[2] = 3;
+	    arrayName[3] = 4;
+	    
+	    // Array mit for Schleife initialisieren
+	    int[] intArray = new int[10];
+	    
+	    for (int i=0; i<intArray.length; i++) {
+		    // Initialisierung
+		    intArray[i] = i+1;
+		    
+		    // Ausgabe
+		    System.out.println(intArray[i]);
+		}
+	    
+	    
+	    // Array erzeugen 2
+	    String[] stringArr = {"abc", "def", "ghi"};
+	    
+		for (int i=0; i<stringArr.length; i++) {
+		    //System.out.println(stringArr[i]);
+		}
+
+	}
+
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+
+        // Erstelle eine Methode arrayZero, die ein Array
+        // der Länge laenge  mit Nullen initialisiert.
+        int[] ausgabe = arrayZero(50);
+        
+		System.out.println();
+        for (int i=0; i<ausgabe.length; i++) {
+		    
+		    // Ausgabe
+		    System.out.print(ausgabe[i] + ", ");
+		}
+        
+	}
+	
+	public static int[] arrayZero(int laenge) {
+	    
+	    // Array erzeugen
+	    int[] intArray = new int[laenge];
+	    
+	    // Initialiserung mit
+	    for (int i=0; i<intArray.length; i++) {
+		    // Initialisierung
+		    intArray[i] = 0;
+		    
+		    // Ausgabe
+		    System.out.print(intArray[i] + ", ");
+		}
+		
+		return intArray;
+	    
+	}
+
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+
+        // Erstelle eine Methode arrayZero, die ein Array
+        // der Länge laenge  mit Nullen initialisiert.
+        int[] ausgabe = arrayZero(10);
+        
+		System.out.println("Normale for-Schleife");
+		// Ausgabe mit for-Schleife, wenn Inhalt gleich 5
+        for (int i=0; i<ausgabe.length; i++) {
+		    
+		    int zahl = ausgabe[i];
+		    
+		    if (ausgabe[i] == 5) {
+		       // Ausgabe
+		       System.out.println("Schleife enthält: " + ausgabe[i]);
+		        
+		    }
+		}
+		
+		// Ausgabe mit erweiterten for-Schleife, wenn Inhalt gleich 5
+		System.out.println("Erweiterte for-Schleife");
+		// { 0, 1, 2, 3, 4, 5, ... 10 }
+		for (int zahl: ausgabe) {
+		    
+		    if (zahl == 5) {
+		       // Ausgabe
+		       System.out.println("Schleife enthält: " + zahl);
+		        
+		    }
+		}
+        
+	}
+	
+	public static int[] arrayZero(int laenge) {
+	    
+	    // Array erzeugen
+	    int[] intArray = new int[laenge];
+	    
+	    // Initialiserung mit
+	    for (int i=0; i<intArray.length; i++) {
+		    
+		    // Initialisierung
+		    intArray[i] = i+1;
+		    
+		    // Ausgabe
+		    //System.out.print(intArray[i] + ", ");
+		}
+		
+		return intArray;
+	    
+	}
+
+}
+
+public class Hello {
+
+	public static void main(String[] args) {
+        
+        int[] zahlen = { 1, 2, 3, 4, 5, 20, 7, 8, 9, 10 };
+
+        // Erstelle eine Methode arrayReverse, die ein Array entgegennimmt und
+        // die Position der Element vertauscht. Gib das Array zurück.
+        
+        int[] resultArray = arrayReverse(zahlen);
+        
+        for (int zahl: resultArray) {
+            System.out.print(zahl + " ");
+        }
+        
+	}
+	
+	public static int[] arrayReverse(int[] arrayIn) {
+	    
+	    //int[] arrayOut = new int[arrayIn.length];
+	    
+	    for (int i=0; i<arrayIn.length / 2; i++) {
+	        int hilfsvariable = arrayIn[i];
+	        arrayIn[i] = arrayIn[arrayIn.length - i - 1];
+	        arrayIn[arrayIn.length - i - 1] = hilfsvariable;
+	       
+	    }
+	    
+	    return arrayIn;
+	}
+
+
+}

@@ -116,6 +116,7 @@ public class AbgabeXY {
         String res6g = in.nextLine();
         checkAnswer(res6g, "char");
 
+        in.close();
     }
 
     private static void checkAnswer(int answer, int solution) {
